@@ -1,0 +1,18 @@
+pkgbase = fiemap-rs-git
+	pkgdesc = FIEMAP library and tools for Rust
+	pkgver = r15.c064181
+	pkgrel = 1
+	url = https://github.com/lilydjwg/fiemap-rs
+	arch = x86_64
+	license = unknown
+	makedepends = git
+	makedepends = cargo
+	depends = gcc-libs
+	provides = fraghist
+	provides = fragmorethan
+	conflicts = fraghist
+	conflicts = fragmorethan
+	source = fiemap-rs::git+https://github.com/lilydjwg/fiemap-rs.git#branch=master
+	sha256sums = SKIP
+
+pkgname = fiemap-rs-git

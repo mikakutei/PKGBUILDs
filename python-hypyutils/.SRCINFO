@@ -1,0 +1,14 @@
+pkgbase = python-hypyutils
+	pkgdesc = HyDEV Utils for Python
+	pkgver = 1.0.7
+	pkgrel = 1
+	url = https://github.com/hykilpikonna/HyPyUtils
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	depends = python
+	conflicts = python-hypyutils
+	source = HyPyUtils-1.0.7.tar.gz::https://github.com/hykilpikonna/HyPyUtils/archive/1.0.7.tar.gz
+	sha256sums = 55b8d4ac30e003d9fc055ccc0a627ef9d69b86b38de7a3717f2faa8153fd63ac
+
+pkgname = python-hypyutils

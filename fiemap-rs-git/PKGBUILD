@@ -1,0 +1,46 @@
+# Maintainer: Mikakutei <mikakutei@outlook.com>
+
+pkgname=fiemap-rs-git
+_pkgname=fiemap-rs
+pkgver=r15.c064181
+pkgrel=1
+pkgdesc="FIEMAP library and tools for Rust"
+arch=('x86_64')
+url="https://github.com/lilydjwg/${_pkgname}"
+license=('unknown')
+depends=('gcc-libs')
+makedepends=('git' 'cargo')
+provides=('fraghist' 'fragmorethan')
+conflicts=('fraghist' 'fragmorethan')
+source=("${_pkgname}::git+${url}.git#branch=master")
+sha256sums=('SKIP')
+
+pkgver() {
+    cd "${_pkgname}"
+    printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+prepare() {
+    cd "${_pkgname}"
+    cargo fetch --locked --target "$CARCH-unknown-linux-gnu"
+}
+
+build() {
+    cd "${_pkgname}"
+    export RUSTUP_TOOLCHAIN=stable
+    export CARGO_TARGET_DIR=target
+    cargo build --frozen --release --all-features
+}
+
+check() {
+    cd "${_pkgname}"
+    export RUSTUP_TOOLCHAIN=stable
+    cargo test --frozen --all-features
+}
+
+package() {
+    cd "${_pkgname}"
+    install -Dm755 "target/release/fraghist" "${pkgdir}/usr/bin/fraghist"
+    install -Dm755 "target/release/fragmorethan" "${pkgdir}/usr/bin/fragmorethan"
+}
+

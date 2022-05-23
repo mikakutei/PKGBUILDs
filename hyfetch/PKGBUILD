@@ -1,0 +1,46 @@
+# Maintainer: Mikakutei <mikakutei@outlook.com>
+
+pkgname=hyfetch
+pkgver=1.0.7
+pkgrel=1
+pkgdesc="Neofetch with LGBTQ pride flags!"
+arch=('any')
+url="https://github.com/hykilpikonna/${pkgname}"
+license=('MIT')
+depends=('bash' 'python-typing_extensions')
+optdepends=(
+  'catimg: Display Images'
+  'chafa: Image to text support'
+  'feh: Wallpaper Display'
+  'imagemagick: Image cropping / Thumbnail creation / Take a screenshot'
+  'jp2a: Display Images'
+  'libcaca: Display Images'
+  'nitrogen: Wallpaper Display'
+  'w3m: Display Images'
+  'xdotool: See https://github.com/dylanaraps/neofetch/wiki/Images-in-the-terminal'
+  'xorg-xdpyinfo: Resolution detection (Single Monitor)'
+  'xorg-xprop: Desktop Environment and Window Manager'
+  'xorg-xrandr: Resolution detection (Multi Monitor + Refresh rates)'
+  'xorg-xwininfo: See https://github.com/dylanaraps/neofetch/wiki/Images-in-the-terminal'
+)
+makedepends=('python-setuptools')
+conflicts=('hyfetch')
+source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/${pkgver}.tar.gz")
+sha256sums=('04dacd550f6622b1cfb118e0185a2285d7194b949436287d243c8c067af42b70')
+
+build() {
+  cd "${pkgname}-${pkgver}"
+  python setup.py build
+}
+
+check() {
+  cd "${pkgname}-${pkgver}"
+  python setup.py test    
+}
+
+package() {
+  cd "${pkgname}-${pkgver}"
+  python setup.py install --root="${pkgdir}" --optimize=1
+  install -Dm644 LICENSE.md "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.md"
+}
+
