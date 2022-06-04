@@ -1,7 +1,7 @@
 # Maintainer: Mikakutei <mikakutei@outlook.com>
 
 pkgname=fiemap-rs-git
-_pkgname=fiemap-rs
+_pkgname=${pkgname%-*}
 pkgver=r15.c064181
 pkgrel=1
 pkgdesc="FIEMAP library and tools for Rust"
