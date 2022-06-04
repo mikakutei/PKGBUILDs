@@ -1,0 +1,33 @@
+# Maintainer: Mikakutei <mikakutei@outlook.com>
+
+pkgname=nct6687-dkms-git
+_pkgname=${pkgname%%-*}
+pkgver=r49.15d09bd
+pkgrel=1
+pkgdesc="Linux kernel module for Nuvoton NCT6687-R"
+arch=('any')
+url="https://github.com/Fred78290/${_pkgname}d"
+license=('GPL2')
+depends=('dkms')
+makedepends=('git')
+provides=('nct6687')
+conflicts=('nct6687')
+source=("${_pkgname}::git+${url}.git#branch=main"
+        "dkms.conf")
+sha256sums=('SKIP'
+            '41a08607723dcee908d7bc06496cfe7a982fd39e5be132895bd597be0d272e79')
+
+pkgver() {
+    cd "${_pkgname}"
+    printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+package() {
+    mkdir -p "${pkgdir}/usr/src/${_pkgname}-${pkgver}/"
+    cp -r "${srcdir}/${_pkgname}/"* "${pkgdir}/usr/src/${_pkgname}-${pkgver}/"
+    install -Dm644 "${srcdir}/dkms.conf" "${pkgdir}/usr/src/${_pkgname}-${pkgver}/dkms.conf"
+    sed -e "s/@_PKGNAME@/${_pkgname}/" \
+        -e "s/@PKGVER@/${pkgver}/" \
+        -i "${pkgdir}/usr/src/${_pkgname}-${pkgver}/dkms.conf"
+}
+

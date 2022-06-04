@@ -4,13 +4,15 @@ Contains PKGBUILDs for Arch Linux by mikakutei. Due to the lack of maintainence,
 
 ** List of packages
 
-| ~pkgname~           |      ~pkgver~ | ~pkgdesc~                           |
-|-------------------+-------------+-----------------------------------|
-| gomclauncher      |       1.4.8 | A Minecraft Launcher              |
-| gomclauncher-bin  |       1.4.8 | A Minecraft Launcher              |
-| fiemap-rs-git     | r15.c064181 | FIEMAP library and tools for Rust |
-| python-hypyutils  |       1.0.7 | HyDEV Utils for Python            |
-| hyfetch           |       1.0.7 | Neofetch with LGBTQ pride flags!  |
+| ~pkgname~          |      ~pkgver~ | ~pkgdesc~                                   |
+|------------------+-------------+-------------------------------------------|
+| gomclauncher     |       1.4.8 | A Minecraft Launcher                      |
+| gomclauncher-bin |       1.4.8 | A Minecraft Launcher                      |
+| fiemap-rs-git    | r15.c064181 | FIEMAP library and tools for Rust         |
+| python-hypyutils |       1.0.7 | HyDEV Utils for Python                    |
+| hyfetch          |       1.0.7 | Neofetch with LGBTQ pride flags!          |
+| nct6687-dkms-git | r49.15d09bd | Linux kernel module for Nuvoton NCT6687-R |
+
 
 ** License
 
