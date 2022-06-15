@@ -2,7 +2,7 @@
 
 pkgname=nct6687-dkms-git
 _pkgname=${pkgname%%-*}
-pkgver=r49.15d09bd
+pkgver=r53.4abe624
 pkgrel=1
 pkgdesc="Linux kernel module for Nuvoton NCT6687-R"
 arch=('any')
@@ -15,7 +15,7 @@ conflicts=('nct6687')
 source=("${_pkgname}::git+${url}.git#branch=main"
         "dkms.conf")
 sha256sums=('SKIP'
-            '41a08607723dcee908d7bc06496cfe7a982fd39e5be132895bd597be0d272e79')
+            '7088f4887cca0c697aa3ba53520702227a5737a83599cf704ae3c6a57905bbdb')
 
 pkgver() {
     cd "${_pkgname}"

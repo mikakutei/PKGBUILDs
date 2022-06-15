@@ -1,6 +1,6 @@
 pkgbase = nct6687-dkms-git
 	pkgdesc = Linux kernel module for Nuvoton NCT6687-R
-	pkgver = r49.15d09bd
+	pkgver = r53.4abe624
 	pkgrel = 1
 	url = https://github.com/Fred78290/nct6687d
 	arch = any
@@ -12,6 +12,6 @@ pkgbase = nct6687-dkms-git
 	source = nct6687::git+https://github.com/Fred78290/nct6687d.git#branch=main
 	source = dkms.conf
 	sha256sums = SKIP
-	sha256sums = 41a08607723dcee908d7bc06496cfe7a982fd39e5be132895bd597be0d272e79
+	sha256sums = 7088f4887cca0c697aa3ba53520702227a5737a83599cf704ae3c6a57905bbdb
 
 pkgname = nct6687-dkms-git
