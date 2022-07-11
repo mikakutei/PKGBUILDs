@@ -1,16 +1,16 @@
 pkgbase = gomclauncher
 	pkgdesc = A Minecraft Launcher
-	pkgver = 1.4.7
+	pkgver = 1.4.12
 	pkgrel = 1
 	url = https://github.com/xmdhs/gomclauncher
 	arch = x86_64
-	arch = i386
 	license = MIT
 	makedepends = go
 	depends = glibc
-	source = gomclauncher-1.4.7.tar.gz::https://github.com/xmdhs/gomclauncher/archive/v1.4.7.tar.gz
-	source = https://raw.githubusercontent.com/xmdhs/gomclauncher/v1.4.7/LICENSE
-	sha256sums = eff08cf28460e72f691c4f6d2e773418436a5b1d0cbfe0991bd40fa62815afa9
+	conflicts = gomclauncher-bin
+	source = gomclauncher-1.4.12.tar.gz::https://github.com/xmdhs/gomclauncher/archive/v1.4.12.tar.gz
+	source = https://raw.githubusercontent.com/xmdhs/gomclauncher/v1.4.12/LICENSE
+	sha256sums = e623135005f87feed517cbbdc6e8b30a83d17113a3b25c02a1c696cbc3b886a9
 	sha256sums = 9c9c42c8f4534fe4e44fb26b1e3df7b133fbafbb2f72563653d4f33ecf948fa9
 
 pkgname = gomclauncher
