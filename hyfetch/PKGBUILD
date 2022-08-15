@@ -1,13 +1,13 @@
 # Maintainer: Mikakutei <mikakutei@outlook.com>
 
 pkgname=hyfetch
-pkgver=1.0.7
+pkgver=1.4.0
 pkgrel=1
 pkgdesc="Neofetch with LGBTQ pride flags!"
 arch=('any')
 url="https://github.com/hykilpikonna/${pkgname}"
 license=('MIT')
-depends=('bash' 'python-typing_extensions')
+depends=('bash' 'python-setuptools' 'python-typing_extensions')
 optdepends=(
   'catimg: Display Images'
   'chafa: Image to text support'
@@ -23,10 +23,9 @@ optdepends=(
   'xorg-xrandr: Resolution detection (Multi Monitor + Refresh rates)'
   'xorg-xwininfo: See https://github.com/dylanaraps/neofetch/wiki/Images-in-the-terminal'
 )
-makedepends=('python-setuptools')
 conflicts=('hyfetch')
 source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/${pkgver}.tar.gz")
-sha256sums=('04dacd550f6622b1cfb118e0185a2285d7194b949436287d243c8c067af42b70')
+sha256sums=('66e445fa515925b303c52c28dd24430e229bd4f0478d30cdf66f42d56dd5363e')
 
 build() {
   cd "${pkgname}-${pkgver}"

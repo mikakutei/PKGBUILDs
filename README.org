@@ -10,7 +10,7 @@ Contains PKGBUILDs for Arch Linux by mikakutei. Due to the lack of maintainence,
 | gomclauncher-bin |      1.4.12 | A Minecraft Launcher                      |
 | fiemap-rs-git    | r15.c064181 | FIEMAP library and tools for Rust         |
 | python-hypyutils |       1.0.7 | HyDEV Utils for Python                    |
-| hyfetch          |       1.0.7 | Neofetch with LGBTQ pride flags!          |
+| hyfetch          |       1.4.0 | Neofetch with LGBTQ pride flags!          |
 | nct6687-dkms-git | r55.d8b51f0 | Linux kernel module for Nuvoton NCT6687-R |
 
 
