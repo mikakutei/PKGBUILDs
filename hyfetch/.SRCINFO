@@ -1,6 +1,6 @@
 pkgbase = hyfetch
 	pkgdesc = Neofetch with LGBTQ pride flags!
-	pkgver = 1.4.0
+	pkgver = 1.4.1
 	pkgrel = 1
 	url = https://github.com/hykilpikonna/hyfetch
 	arch = any
@@ -22,7 +22,7 @@ pkgbase = hyfetch
 	optdepends = xorg-xrandr: Resolution detection (Multi Monitor + Refresh rates)
 	optdepends = xorg-xwininfo: See https://github.com/dylanaraps/neofetch/wiki/Images-in-the-terminal
 	conflicts = hyfetch
-	source = hyfetch-1.4.0.tar.gz::https://github.com/hykilpikonna/hyfetch/archive/1.4.0.tar.gz
-	sha256sums = 66e445fa515925b303c52c28dd24430e229bd4f0478d30cdf66f42d56dd5363e
+	source = hyfetch-1.4.1.tar.gz::https://github.com/hykilpikonna/hyfetch/archive/1.4.1.tar.gz
+	sha256sums = 15c800a231a098becb63b5f1d4224cf6c3404fd605f44f640b768f797a2a727f
 
 pkgname = hyfetch
