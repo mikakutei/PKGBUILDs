@@ -1,7 +1,7 @@
 # Maintainer: Mikakutei <mikakutei@outlook.com>
 
 pkgname=hyfetch
-pkgver=1.4.1
+pkgver=1.4.3
 pkgrel=1
 pkgdesc="Neofetch with LGBTQ pride flags!"
 arch=('any')
@@ -25,7 +25,7 @@ optdepends=(
 )
 conflicts=('hyfetch')
 source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/${pkgver}.tar.gz")
-sha256sums=('15c800a231a098becb63b5f1d4224cf6c3404fd605f44f640b768f797a2a727f')
+sha256sums=('e06516fe774c74b6309a8099c7b6d4ba56a64149571ee556f0c0648c7be232ec')
 
 build() {
   cd "${pkgname}-${pkgver}"
