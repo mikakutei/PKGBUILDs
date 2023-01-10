@@ -1,13 +1,13 @@
 # Maintainer: Mikakutei <mikakutei@outlook.com>
 
 pkgname=hyfetch
-pkgver=1.4.4
+pkgver=1.4.5
 pkgrel=1
-pkgdesc="Neofetch with LGBTQ pride flags!"
+pkgdesc="Neofetch with LGBTQ+ pride flags!"
 arch=('any')
 url="https://github.com/hykilpikonna/${pkgname}"
 license=('MIT')
-depends=('bash' 'python-setuptools' 'python-typing_extensions')
+depends=('bash' 'python-setuptools' 'python-typing_extensions' 'fastfetch')
 optdepends=(
   'catimg: Display Images'
   'chafa: Image to text support'
@@ -25,7 +25,7 @@ optdepends=(
 )
 conflicts=('hyfetch')
 source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/${pkgver}.tar.gz")
-sha256sums=('c46cf6e87c2cb708d5ee06e56e6b656397a4076f9f3acb774b3348f205283215')
+sha256sums=('079f1f293ffa614e99d43e7fa6103b5e79078b4d5190e25f7a0766aa202209b0')
 
 build() {
   cd "${pkgname}-${pkgver}"
@@ -34,7 +34,7 @@ build() {
 
 check() {
   cd "${pkgname}-${pkgver}"
-  python setup.py test    
+  python setup.py test
 }
 
 package() {
