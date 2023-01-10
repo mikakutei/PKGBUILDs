@@ -2,7 +2,7 @@
 
 pkgname=nct6687-dkms-git
 _pkgname=${pkgname%%-*}
-pkgver=r62.f59feef
+pkgver=r66.e3ce28a
 pkgrel=1
 pkgdesc="Linux kernel module for Nuvoton NCT6687-R"
 arch=('any')
