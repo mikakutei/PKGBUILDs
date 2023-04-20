@@ -3,7 +3,7 @@
 
 pkgname=gomclauncher-bin
 _pkgname=gomclauncher
-pkgver=1.4.12
+pkgver=1.4.13
 pkgrel=1
 pkgdesc="A Minecraft Launcher"
 arch=('x86_64')
@@ -12,11 +12,11 @@ license=('MIT')
 conflicts=('gomclauncher')
 source=("${url}/releases/download/v${pkgver}/gml-linux.gz"
 	"https://raw.githubusercontent.com/xmdhs/${_pkgname}/v${pkgver}/LICENSE")
-sha256sums=('b2f445b5164c4845c043fc7335366f381c2231fe46d2c1c8569c69ddd1845fa1'
+sha256sums=('2eef429bc743b6de87cd9cb35b67414887cda6db1b2a6f832208c5b9ade335a9'
             '9c9c42c8f4534fe4e44fb26b1e3df7b133fbafbb2f72563653d4f33ecf948fa9')
 
 package() {
     install -Dm755 gml-linux "${pkgdir}/usr/bin/gml"
-    install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${_pkgname}/LICENSE"
+    install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
 
