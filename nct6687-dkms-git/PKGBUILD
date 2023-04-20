@@ -2,13 +2,13 @@
 
 pkgname=nct6687-dkms-git
 _pkgname=${pkgname%%-*}
-pkgver=r66.e3ce28a
+pkgver=r78.df1565a
 pkgrel=1
 pkgdesc="Linux kernel module for Nuvoton NCT6687-R"
 arch=('any')
 url="https://github.com/Fred78290/${_pkgname}d"
 license=('GPL2')
-depends=('dkms')
+depends=('dkms' 'make')
 makedepends=('git')
 provides=('nct6687')
 conflicts=('nct6687')
